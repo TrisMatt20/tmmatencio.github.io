@@ -1,0 +1,87 @@
+:root {
+    --bg-color: #f0efef;
+    --black: black;
+    --font-color: white;
+}
+
+@import url('https://fonts.cdnfonts.com/css/margesh');
+
+body {
+    scroll-behavior: smooth;
+    background-color: var(--bg-color);
+}
+
+.col-2 {
+    background-color: var(--black);
+    color: white; 
+    min-height: 100vh; 
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+}
+
+.logo img {
+    margin-top: 20px;
+    width: 80px;
+    margin-left: 50px;
+}
+
+.navtab {
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.home, .about, .projects, .pr, .contact {
+    font-family: 'margesh';
+    font-weight: normal; 
+    text-decoration: none;
+    color: var(--font-color); 
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+    transition: font-weight 0.3s ease-in-out, color 0.3s ease-in-out; 
+}
+
+
+.home::before,
+.about::before,
+.projects::before,
+.pr::before,
+.contact::before {
+    content: "";
+    position: absolute;
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    width: 0%; 
+    height: 2px; 
+    background: linear-gradient(to right, #FFB147, #FF6C63, #B86ADF); 
+    transition: width 0.4s ease-in-out; 
+}
+
+/* Hover effect */
+.home:hover,
+.about:hover,
+.projects:hover,
+.pr:hover,
+.contact:hover {
+    font-weight: bold; 
+    color: white; 
+}
+
+/* Expand the line from left to right on hover */
+.home:hover::before,
+.about:hover::before,
+.projects:hover::before,
+.pr:hover::before,
+.contact:hover::before {
+    width: 100%;
+}
+
+
+
