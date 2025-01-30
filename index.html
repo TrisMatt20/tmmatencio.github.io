@@ -7,47 +7,105 @@
     <title>TM's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="https://fonts.cdnfonts.com/css/gentium-book-plus" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/gentium-book-plus" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
 </head>
 
 <body>
+    <div id="spinner" class="spinner-container">
+        <div class="cool-spinner"></div>
+    </div>
+    <script src="assets/js/spinner.js"></script>
+
     <div class="container-fluid">
         <div class="row">
+            <!-- sidebar -->
             <div class="col-1">
                 <div class="logo">
                     <img src="assets/img/tmLogo.png" alt="TM">
                 </div>
+                <!-- navtabs -->
                 <ul class="navtab nav flex-column">
                     <li class="nav-item">
-                        <a class="home nav-link active" aria-current="page" href="#">HOME</a>
+                        <a class="home nav-link active" aria-current="page" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="projects nav-link" href="#">PROJECTS</a>
-                    </li> 
-                    <li class="nav-item">
-                        <a class="pr nav-link" href="#">PROGRESS</a>
-                      </li>
-                    <li class="nav-item">
-                        <a class="about nav-link" href="#">ABOUT</a>
+                        <a class="projects nav-link" href="projects.html">PROJECTS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="contact nav-link" href="#">CONTACT</a>
+                        <a class="pr nav-link" href="progress.html">PROGRESS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="about nav-link" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="contact nav-link" href="contact.html">CONTACT</a>
                     </li>
                 </ul>
-                
+
+
+                <!-- footer -->
                 <footer class="footer">
+                    <ul class="socials nav flex-column">
+                        <li class="instagram">
+                            <a href="https://www.instagram.com/_bemore35/">
+                                <img src="assets/img/black ig.png" alt="IG">
+                            </a>
+                        </li>
+                        <li class="github">
+                            <a href="https://github.com/TrisMatt20">
+                                <img src="assets/img/github.png" alt="IG">
+                            </a>
+                        </li>
+                        <li class="x">
+                            <a href="https://x.com/MtthwTrey5">
+                                <img src="assets/img/black x.png" alt="IG">
+                            </a>
+                        </li>
+                    </ul>
                     <p>Copyright © 2025 TM Matencio. All rights reserved.</p>
                 </footer>
             </div>
-            <div class="col-11 text-center">
-                <div class="">Hello!</div>
+            <!-- main content -->
+            <div class="col-5">
+                <div class="vector">
+                    <img src="assets/img/Vector.png" alt="vector">
+                </div>
+                <div class="intro">
+                    <div class="intros display-3">
+                        My name <br>is <b>Tristan <br> Matthew...</b>
+                    </div>
+                    <h1 class="field">
+                        <i>Aspiring Database Administrator <br> and Back-End Developer</i>
+                    </h1>
+                    <div>
+                        <button class="connect"><span>Let's Talk</span></button>
+                    </div>
+                    <!-- contact-info -->
+                    <div class="contact-info">
+                        <div class="item">
+                            <img src="assets/img/phone.png" alt="phone">
+                            <span class="num">+639152284543</span>
+                        </div>
+                        <div class="item">
+                            <img src="assets/img/email.png" alt="email">
+                            <span class="email">tmtmatencio@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 text-center">
+                <div class="profile">
+                    <img src="assets/img/portfolio_profile.png" alt="profile">
+                </div>          
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="assets/js/navtab.js"></script>
 </body>
 
 </html>

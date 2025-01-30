@@ -1,0 +1,132 @@
+:root {
+    --bg-color: #f0efef;
+    --black: rgb(43, 39, 39);
+    --font-color: white;
+    --font: 'Gentium Book Plus', sans-serif;
+}
+
+.col-1 {
+    background-color: var(--black);
+    color: white;
+    min-height: 100vh; /* Full height */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo img {
+    margin-top: 20px;
+    width: 80px;
+    margin-left: 20px;
+}
+
+.navtab {
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.home,
+.about,
+.projects,
+.pr,
+.contact {
+    font-family: var(--font);
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    transition: font-weight 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+
+.home::before,
+.about::before,
+.projects::before,
+.pr::before,
+.contact::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(to right, #FFB147, #FF6C63, #B86ADF);
+    transition: width 0.4s ease-in-out;
+}
+
+
+.home.active::before,
+.about.active::before,
+.projects.active::before,
+.pr.active::before,
+.contact.active::before {
+    width: 100%;
+}
+
+
+.home.active,
+.about.active,
+.projects.active,
+.pr.active,
+.contact.active {
+    font-weight: bold;
+    color:white ;
+}
+
+
+.footer {
+    margin-top: auto;
+    margin-left: 15px;
+    text-align: left;
+    font-size: 12px;
+    color: white;
+    padding-bottom: 5px;
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+}
+
+.socials {
+    display: flex; 
+    gap: 20px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: left; 
+}
+
+.socials li {
+    display: inline-block;
+}
+
+.socials a img {
+    width: 40px; 
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.socials a:hover img {
+    transform: scale(1.1); 
+}
+
+
+footer p {
+    text-align: left;
+    margin-top: 20px;
+}
