@@ -1,50 +1,61 @@
 :root {
     --bg-color: #f0efef;
-    --black: black;
+    --black: rgb(43, 39, 39);
     --font-color: white;
+    --font: 'Gentium Book Plus', sans-serif;
 }
 
-@import url('https://fonts.cdnfonts.com/css/margesh');
+@import url('https://fonts.cdnfonts.com/css/gentium-book-plus');
 
 body {
     scroll-behavior: smooth;
     background-color: var(--bg-color);
 }
 
-.col-2 {
+.col-1 {
     background-color: var(--black);
-    color: white; 
-    min-height: 100vh; 
+    color: white;
+    min-height: 100vh; /* Full height */
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .logo {
     display: flex;
-    align-items: center; 
-    justify-content: flex-start; 
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .logo img {
     margin-top: 20px;
     width: 80px;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 .navtab {
     text-align: left;
     margin-top: 40px;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
-.home, .about, .projects, .pr, .contact {
-    font-family: 'margesh';
-    font-weight: normal; 
+.home,
+.about,
+.projects,
+.pr,
+.contact {
+    font-family: var(--font);
+    font-weight: normal;
     text-decoration: none;
-    color: var(--font-color); 
-    font-size: 18px;
+    color: var(--font-color);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-transform: uppercase;
     position: relative;
     display: inline-block;
-    transition: font-weight 0.3s ease-in-out, color 0.3s ease-in-out; 
+    transition: font-weight 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 
@@ -55,13 +66,13 @@ body {
 .contact::before {
     content: "";
     position: absolute;
-    left: 0; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    width: 0%; 
-    height: 2px; 
-    background: linear-gradient(to right, #FFB147, #FF6C63, #B86ADF); 
-    transition: width 0.4s ease-in-out; 
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(to right, #FFB147, #FF6C63, #B86ADF);
+    transition: width 0.4s ease-in-out;
 }
 
 /* Hover effect */
@@ -70,8 +81,8 @@ body {
 .projects:hover,
 .pr:hover,
 .contact:hover {
-    font-weight: bold; 
-    color: white; 
+    font-weight: bold;
+    color: white;
 }
 
 /* Expand the line from left to right on hover */
@@ -83,5 +94,11 @@ body {
     width: 100%;
 }
 
-
-
+.footer {
+    margin-top: auto; 
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    padding-bottom: 10px;
+    font-family: var(--font);
+}
